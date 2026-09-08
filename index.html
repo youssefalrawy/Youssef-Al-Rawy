@@ -12,6 +12,9 @@
   <meta property="og:image" content="https://youssefalrawy.github.io/Youssef-Al-Rawy/assets/images/maa-althahab-musk-damas.webp">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://youssefalrawy.github.io/Youssef-Al-Rawy/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <title>Youssef El Rawy — Content Creator & Social Media Marketer</title>
   <style>
     :root {
@@ -25,7 +28,8 @@
       --line-strong: rgba(244, 240, 229, 0.24);
       --gold: #d8b96a;
       --gold-pale: #f0d994;
-      --lime: #bdff64;
+      --accent: #d8b96a;
+      --accent-ink: #15130d;
       --coral: #e55d42;
       --max: 1180px;
       --radius: 26px;
@@ -47,11 +51,13 @@
       color: var(--ink);
       background:
         radial-gradient(circle at 8% 4%, rgba(216, 185, 106, 0.13), transparent 26rem),
-        radial-gradient(circle at 94% 22%, rgba(189, 255, 100, 0.06), transparent 24rem),
+        radial-gradient(circle at 94% 22%, rgba(216, 185, 106, 0.06), transparent 24rem),
         var(--bg);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 16px;
-      line-height: 1.65;
+      line-height: 1.72;
+      font-optical-sizing: auto;
+      text-rendering: optimizeLegibility;
       overflow-x: hidden;
     }
 
@@ -82,7 +88,7 @@
     }
 
     :focus-visible {
-      outline: 3px solid var(--lime);
+      outline: 3px solid var(--accent);
       outline-offset: 4px;
     }
 
@@ -156,12 +162,13 @@
       color: #0c0f0d !important;
       background: var(--ink);
       border-radius: 999px;
+      white-space: nowrap;
     }
 
     .hero {
       min-height: calc(100svh - 76px);
       display: grid;
-      grid-template-columns: minmax(0, 1.22fr) minmax(320px, 0.78fr);
+      grid-template-columns: minmax(0, 1.16fr) minmax(340px, 0.84fr);
       align-items: center;
       gap: clamp(44px, 7vw, 92px);
       padding-block: clamp(72px, 10vw, 128px);
@@ -198,13 +205,24 @@
       margin-top: 0;
     }
 
+    h1,
+    h2,
+    h3,
+    h4 {
+      text-wrap: balance;
+    }
+
+    p {
+      text-wrap: pretty;
+    }
+
     h1 {
       max-width: 850px;
       margin-bottom: 24px;
       font-size: clamp(3.6rem, 8.3vw, 7.6rem);
-      font-weight: 850;
-      letter-spacing: -0.073em;
-      line-height: 0.88;
+      font-weight: 800;
+      letter-spacing: -0.052em;
+      line-height: 0.92;
     }
 
     .hero-name {
@@ -217,8 +235,8 @@
       margin-top: 16px;
       color: var(--gold);
       font-size: 0.39em;
-      letter-spacing: -0.045em;
-      line-height: 1.04;
+      letter-spacing: -0.025em;
+      line-height: 1.12;
     }
 
     .lede {
@@ -226,7 +244,7 @@
       margin-bottom: 32px;
       color: #c9cec8;
       font-size: clamp(1.04rem, 1.7vw, 1.26rem);
-      line-height: 1.65;
+      line-height: 1.76;
     }
 
     .actions {
@@ -282,7 +300,7 @@
     .portrait-frame {
       position: relative;
       width: min(100%, 410px);
-      aspect-ratio: 0.82;
+      aspect-ratio: 0.9;
       padding: 16px;
       border: 1px solid var(--line-strong);
       border-radius: 220px 220px var(--radius) var(--radius);
@@ -307,29 +325,32 @@
       border-radius: inherit;
       object-fit: cover;
       object-position: center;
-      filter: saturate(0.9) contrast(1.03);
+      filter: saturate(1) contrast(1.02);
+      image-rendering: auto;
     }
 
     .hero-stamp {
       position: absolute;
       right: -18px;
-      bottom: 54px;
-      width: 138px;
-      height: 138px;
+      bottom: 38px;
+      width: auto;
+      min-width: 158px;
+      height: auto;
       display: grid;
       place-items: center;
-      padding: 20px;
-      color: #0c0f0d;
-      background: var(--lime);
-      border-radius: 50%;
+      padding: 15px 19px;
+      color: var(--accent-ink);
+      background: var(--accent);
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      border-radius: 999px;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.34);
-      font-size: 0.75rem;
-      font-weight: 950;
-      letter-spacing: 0.08em;
-      line-height: 1.35;
+      font-size: 0.71rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      line-height: 1.3;
       text-align: center;
       text-transform: uppercase;
-      transform: rotate(8deg);
+      transform: none;
     }
 
     .hero-side-note {
@@ -376,8 +397,8 @@
       margin-bottom: 7px;
       color: var(--gold-pale);
       font-size: clamp(2.7rem, 5vw, 4.4rem);
-      font-weight: 900;
-      letter-spacing: -0.065em;
+      font-weight: 800;
+      letter-spacing: -0.045em;
       line-height: 0.95;
     }
 
@@ -415,9 +436,9 @@
     h2 {
       margin-bottom: 20px;
       font-size: clamp(2.45rem, 6vw, 5.7rem);
-      font-weight: 850;
-      letter-spacing: -0.065em;
-      line-height: 0.94;
+      font-weight: 800;
+      letter-spacing: -0.044em;
+      line-height: 1;
     }
 
     .section-intro {
@@ -425,6 +446,7 @@
       margin-bottom: 0;
       color: var(--muted);
       font-size: clamp(1rem, 1.5vw, 1.18rem);
+      line-height: 1.75;
     }
 
     .case-study {
@@ -476,9 +498,9 @@
       width: 7px;
       height: 7px;
       content: "";
-      background: var(--lime);
+      background: var(--accent);
       border-radius: 50%;
-      box-shadow: 0 0 0 5px rgba(189, 255, 100, 0.08);
+      box-shadow: 0 0 0 5px rgba(216, 185, 106, 0.09);
     }
 
     .case-copy h3,
@@ -487,9 +509,9 @@
     .twentyfive-copy h3 {
       margin: 22px 0 18px;
       font-size: clamp(2rem, 4.2vw, 4.3rem);
-      font-weight: 850;
-      letter-spacing: -0.06em;
-      line-height: 0.98;
+      font-weight: 800;
+      letter-spacing: -0.038em;
+      line-height: 1.03;
     }
 
     .case-summary {
@@ -524,11 +546,11 @@
     .result-value {
       display: block;
       margin-bottom: 8px;
-      color: var(--lime);
+      color: var(--gold-pale);
       font-size: clamp(2.8rem, 5vw, 5rem);
-      font-weight: 900;
-      letter-spacing: -0.07em;
-      line-height: 0.88;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      line-height: 0.94;
     }
 
     .result-label {
@@ -547,7 +569,7 @@
       min-height: 720px;
       display: grid;
       grid-template-columns: 1.04fr 0.96fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: repeat(3, 1fr);
       gap: 8px;
       padding: 8px;
       background: #0b0d0c;
@@ -563,7 +585,7 @@
     }
 
     .redecor-gallery figure:first-child {
-      grid-row: 1 / 3;
+      grid-row: 1 / 4;
     }
 
     .redecor-gallery img,
@@ -583,14 +605,26 @@
       object-position: 54% center;
     }
 
-    .redecor-gallery figure:nth-child(4) {
+    .redecor-gallery figure:nth-child(5) {
       position: absolute;
       right: 24px;
       bottom: 24px;
-      width: 34%;
-      height: 32%;
+      width: 41%;
+      height: 29%;
       border: 7px solid #0b0d0c;
       box-shadow: 0 16px 45px rgba(0, 0, 0, 0.45);
+    }
+
+    .redecor-gallery figure:nth-child(2) img {
+      object-position: center 46%;
+    }
+
+    .redecor-gallery figure:nth-child(3) img {
+      object-position: center 40%;
+    }
+
+    .redecor-gallery figure:nth-child(4) img {
+      object-position: center 48%;
     }
 
     .maa-case {
@@ -639,6 +673,34 @@
       color: rgba(255, 247, 239, 0.9);
       font-size: 0.78rem;
       font-weight: 750;
+    }
+
+    .maa-social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: 18px;
+      padding: 11px 15px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+      color: #fff7ef;
+      background: rgba(41, 5, 2, 0.16);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+    }
+
+    .maa-social-link:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.5);
+      background: rgba(41, 5, 2, 0.3);
+    }
+
+    .maa-social-link svg {
+      width: 16px;
+      height: 16px;
+      flex: 0 0 auto;
     }
 
     .key-visual {
@@ -790,11 +852,22 @@
     .reel-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
+      gap: 16px;
     }
 
     .reel-card {
       min-width: 0;
+      padding: 9px 9px 17px;
+      border: 1px solid var(--line);
+      border-radius: 21px;
+      background: linear-gradient(155deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012));
+      transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+    }
+
+    .reel-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(216, 185, 106, 0.42);
+      background: linear-gradient(155deg, rgba(216, 185, 106, 0.075), rgba(255, 255, 255, 0.018));
     }
 
     .reel-cover {
@@ -836,10 +909,10 @@
       display: grid;
       place-items: center;
       color: #0c0f0d;
-      background: var(--lime);
+      background: var(--accent);
       border-radius: 50%;
       font-size: 0.69rem;
-      font-weight: 900;
+      font-weight: 800;
     }
 
     .reel-meta {
@@ -847,7 +920,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding: 18px 4px 0;
+      padding: 18px 8px 0;
     }
 
     .reel-meta h4 {
@@ -891,40 +964,43 @@
       justify-content: space-between;
       gap: 42px;
       padding: clamp(34px, 5vw, 62px);
-      color: #10130f;
+      color: var(--ink);
       background:
-        radial-gradient(circle at 86% 12%, rgba(255, 255, 255, 0.65), transparent 16rem),
-        var(--lime);
+        radial-gradient(circle at 88% 8%, rgba(216, 185, 106, 0.22), transparent 18rem),
+        linear-gradient(145deg, #2b251a 0%, #1a1d18 58%, #111411 100%);
+      border-right: 1px solid var(--line);
     }
 
     .project-logo {
-      width: 72px;
-      height: 72px;
+      width: 82px;
+      height: 82px;
       display: grid;
       place-items: center;
-      padding: 11px;
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 15px 35px rgba(21, 31, 14, 0.15);
+      padding: 0;
+      background: transparent;
+      border-radius: 50%;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.3);
     }
 
     .project-logo img {
       width: 100%;
       height: 100%;
       object-fit: contain;
+      border-radius: 50%;
     }
 
     .gaming-panel h3 {
       max-width: 470px;
       margin: 26px 0 16px;
       font-size: clamp(2.3rem, 4vw, 4rem);
-      letter-spacing: -0.06em;
-      line-height: 0.96;
+      letter-spacing: -0.042em;
+      line-height: 1.02;
     }
 
     .gaming-panel p {
       max-width: 470px;
-      color: rgba(16, 19, 15, 0.72);
+      color: var(--muted);
+      line-height: 1.72;
     }
 
     .gaming-stats {
@@ -935,18 +1011,20 @@
 
     .gaming-stat {
       padding-top: 16px;
-      border-top: 1px solid rgba(16, 19, 15, 0.24);
+      border-top: 1px solid rgba(216, 185, 106, 0.34);
     }
 
     .gaming-stat strong {
       display: block;
       margin-bottom: 4px;
       font-size: clamp(1.8rem, 3vw, 3rem);
-      letter-spacing: -0.06em;
+      color: var(--gold-pale);
+      letter-spacing: -0.045em;
       line-height: 1;
     }
 
     .gaming-stat span {
+      color: #bfc4bc;
       font-size: 0.65rem;
       font-weight: 850;
       letter-spacing: 0.08em;
@@ -966,8 +1044,8 @@
     .creator-panel h3 {
       margin: 20px 0 16px;
       font-size: clamp(2.2rem, 4vw, 4rem);
-      letter-spacing: -0.06em;
-      line-height: 0.98;
+      letter-spacing: -0.042em;
+      line-height: 1.03;
     }
 
     .creator-panel p {
@@ -1017,20 +1095,22 @@
     }
 
     .twentyfive-logo {
-      width: 84px;
-      height: 84px;
+      width: 94px;
+      height: 94px;
       display: grid;
       place-items: center;
       margin-bottom: 24px;
-      padding: 12px;
-      background: #fff;
-      border-radius: 19px;
+      padding: 0;
+      background: transparent;
+      border-radius: 50%;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.24);
     }
 
     .twentyfive-logo img {
       width: 100%;
       height: 100%;
       object-fit: contain;
+      border-radius: 50%;
     }
 
     .twentyfive-gallery {
@@ -1043,19 +1123,18 @@
       background: #0b0d0c;
     }
 
-    .twentyfive-gallery figure:nth-child(1),
-    .twentyfive-gallery figure:nth-child(5) {
+    .twentyfive-gallery figure:nth-child(1) {
       grid-row: span 2;
     }
 
-    .twentyfive-gallery figure:nth-child(6) {
-      display: none;
+    .twentyfive-gallery figure:nth-child(1) img {
+      object-position: 60% center;
     }
 
     .experience-layout {
       display: grid;
-      grid-template-columns: 0.72fr 1.28fr;
-      gap: clamp(34px, 7vw, 90px);
+      grid-template-columns: 0.58fr 1.42fr;
+      gap: clamp(34px, 5vw, 64px);
       align-items: start;
     }
 
@@ -1065,7 +1144,7 @@
     }
 
     .experience-sticky h2 {
-      font-size: clamp(2.7rem, 5vw, 5.1rem);
+      font-size: clamp(2.6rem, 4.5vw, 4.55rem);
     }
 
     .experience-sticky p {
@@ -1074,42 +1153,58 @@
     }
 
     .timeline {
-      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
     }
 
     .timeline-item {
       display: grid;
-      grid-template-columns: 68px minmax(0, 1fr);
-      gap: 20px;
-      padding: 26px 0;
-      border-bottom: 1px solid var(--line);
+      grid-template-columns: 64px minmax(0, 1fr);
+      align-content: start;
+      gap: 18px;
+      min-height: 250px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: linear-gradient(150deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012));
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.1);
+      transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+    }
+
+    .timeline-item:hover {
+      transform: translateY(-4px);
+      border-color: rgba(216, 185, 106, 0.38);
+      background: linear-gradient(150deg, rgba(216, 185, 106, 0.075), rgba(255, 255, 255, 0.014));
     }
 
     .timeline-logo {
-      width: 58px;
-      height: 58px;
+      width: 62px;
+      height: 62px;
       display: grid;
       place-items: center;
-      padding: 9px;
-      background: #f1eee6;
-      border-radius: 14px;
+      padding: 0;
+      background: transparent;
+      border-radius: 50%;
     }
 
     .timeline-logo img {
       width: 100%;
       height: 100%;
       object-fit: contain;
+      border-radius: 50%;
     }
 
     .timeline-copy h3 {
-      margin: 1px 0 5px;
-      font-size: 1.12rem;
-      letter-spacing: -0.025em;
+      margin: 0 0 7px;
+      font-size: 1.08rem;
+      letter-spacing: -0.018em;
+      line-height: 1.28;
     }
 
     .timeline-role {
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       color: var(--gold-pale);
       font-size: 0.72rem;
       font-weight: 800;
@@ -1120,7 +1215,8 @@
     .timeline-copy p {
       margin-bottom: 0;
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: 0.86rem;
+      line-height: 1.7;
     }
 
     .capability-grid {
@@ -1130,11 +1226,12 @@
     }
 
     .capability {
-      min-height: 250px;
+      min-height: 232px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      padding: 24px;
+      justify-content: flex-start;
+      gap: 0;
+      padding: 25px;
       border: 1px solid var(--line);
       border-radius: var(--radius-sm);
       background: var(--card);
@@ -1147,24 +1244,31 @@
     }
 
     .capability-index {
-      color: var(--gold);
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 22px;
+      color: var(--accent-ink);
+      background: var(--accent);
+      border-radius: 12px;
       font-size: 0.7rem;
-      font-weight: 850;
+      font-weight: 800;
       letter-spacing: 0.11em;
     }
 
     .capability h3 {
-      margin: 34px 0 9px;
+      margin: 0 0 10px;
       font-size: 1.12rem;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
     }
 
     .capability p {
       margin: 0;
       color: var(--muted);
       font-size: 0.82rem;
-      line-height: 1.55;
+      line-height: 1.68;
     }
 
     .contact {
@@ -1174,7 +1278,7 @@
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background:
-        radial-gradient(circle at 86% 20%, rgba(189, 255, 100, 0.16), transparent 26rem),
+        radial-gradient(circle at 86% 20%, rgba(216, 185, 106, 0.18), transparent 26rem),
         linear-gradient(145deg, rgba(216, 185, 106, 0.12), rgba(255, 255, 255, 0.02)),
         var(--card);
       box-shadow: var(--shadow);
@@ -1248,6 +1352,15 @@
       .redecor-case,
       .twentyfive {
         grid-template-columns: 1fr;
+      }
+
+      .experience-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-sticky {
+        position: static;
+        max-width: 740px;
       }
 
       .redecor-gallery,
@@ -1357,6 +1470,10 @@
         font-size: 0.74rem;
       }
 
+      .nav-cta-number {
+        display: none;
+      }
+
       .hero {
         min-height: auto;
         gap: 54px;
@@ -1384,9 +1501,9 @@
       .hero-stamp {
         right: -4px;
         bottom: 24px;
-        width: 116px;
-        height: 116px;
-        font-size: 0.63rem;
+        min-width: 0;
+        padding: 12px 15px;
+        font-size: 0.62rem;
       }
 
       .section {
@@ -1404,9 +1521,9 @@
       }
 
       .redecor-gallery {
-        min-height: 590px;
+        min-height: 760px;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1.22fr 0.78fr;
+        grid-template-rows: 1.15fr 0.85fr 0.85fr;
       }
 
       .redecor-gallery figure:first-child {
@@ -1414,8 +1531,14 @@
         grid-row: auto;
       }
 
-      .redecor-gallery figure:nth-child(4) {
-        display: none;
+      .redecor-gallery figure:nth-child(5) {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: auto;
+        height: auto;
+        border: 0;
+        box-shadow: none;
       }
 
       .maa-roles {
@@ -1465,28 +1588,28 @@
       }
 
       .twentyfive-gallery {
-        min-height: 600px;
+        min-height: 0;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: auto;
       }
 
-      .twentyfive-gallery figure:nth-child(1),
-      .twentyfive-gallery figure:nth-child(5) {
+      .twentyfive-gallery figure:nth-child(1) {
+        grid-column: 1 / 3;
         grid-row: auto;
+        aspect-ratio: 4 / 3;
       }
 
-      .twentyfive-gallery figure:nth-child(6) {
-        display: block;
+      .twentyfive-gallery figure:not(:first-child) {
+        aspect-ratio: 3 / 4;
       }
 
-      .timeline-item {
-        grid-template-columns: 55px minmax(0, 1fr);
-        gap: 14px;
+      .timeline {
+        grid-template-columns: 1fr;
       }
 
       .timeline-logo {
-        width: 50px;
-        height: 50px;
+        width: 58px;
+        height: 58px;
       }
 
       .capability-grid {
@@ -1527,14 +1650,16 @@
   <header class="nav">
     <div class="shell nav-inner">
       <a class="brand" href="#top" aria-label="Youssef El Rawy, back to top">
-        <img src="assets/images/profile-nav.webp" alt="" width="36" height="36">
+        <img src="assets/images/profile-hero-hq.png" alt="" width="36" height="36">
         <span>Youssef El Rawy</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#work">Selected Work</a>
         <a href="#reels">Latest Reels</a>
         <a href="#experience">Experience</a>
-        <a class="nav-cta" href="#contact">Let’s Talk</a>
+        <a class="nav-cta" href="https://wa.me/201011777413" target="_blank" rel="noopener" aria-label="Message Youssef El Rawy on WhatsApp at +20 10 1177 7413">
+          <span>WhatsApp</span><span class="nav-cta-number"> · +20 10 1177 7413</span>
+        </a>
       </nav>
     </div>
   </header>
@@ -1553,16 +1678,16 @@
             View selected work
             <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a class="button" href="mailto:youssef.mohamed1176@gmail.com">Email me</a>
+          <a class="button" href="https://wa.me/201011777413" target="_blank" rel="noopener">WhatsApp · +20 10 1177 7413</a>
         </div>
       </div>
 
       <div class="hero-visual" data-reveal>
-        <span class="hero-side-note">Strategy · Create · Publish · Learn</span>
+        <span class="hero-side-note">Idea · Shoot · Edit · Grow</span>
         <figure class="portrait-frame">
-          <img src="assets/images/profile-hero.webp" alt="Youssef El Rawy filming content with a phone" width="360" height="360">
+          <img src="assets/images/profile-hero-hq.png" alt="Youssef El Rawy filming content with a phone" width="756" height="756">
         </figure>
-        <div class="hero-stamp">One owner.<br>Full content<br>workflow.</div>
+        <div class="hero-stamp">From idea<br>to impact.</div>
       </div>
     </section>
 
@@ -1617,16 +1742,19 @@
 
           <div class="redecor-gallery" aria-label="Behind-the-scenes production at Redecor and More">
             <figure>
-              <img src="assets/images/redecor-bts-1.webp" alt="On-ground content production at Redecor and More" loading="lazy">
+              <img src="assets/images/redecor-bts-hq-1.webp" alt="On-ground content production at Redecor and More" loading="lazy">
             </figure>
             <figure>
-              <img src="assets/images/redecor-bts-3.webp" alt="Behind the scenes of an office content shoot" loading="lazy">
+              <img src="assets/images/redecor-bts-hq-2.webp" alt="Behind the scenes of an office content shoot" loading="lazy">
             </figure>
             <figure>
-              <img src="assets/images/redecor-bts-4.webp" alt="Lighting and mobile production setup during a company shoot" loading="lazy">
+              <img src="assets/images/redecor-bts-hq-3.webp" alt="Lighting and mobile production setup during a company shoot" loading="lazy">
             </figure>
             <figure>
-              <img src="assets/images/redecor-bts-2.webp" alt="Redecor and More team after an on-ground production day" loading="lazy">
+              <img src="assets/images/redecor-bts-hq-4.webp" alt="Presenting Redecor and More social media and content direction" loading="lazy">
+            </figure>
+            <figure>
+              <img src="assets/images/redecor-bts-hq-5.webp" alt="Redecor and More team after an on-ground production day" loading="lazy">
             </figure>
           </div>
         </article>
@@ -1643,6 +1771,10 @@
                 <span>Production</span>
                 <span>Editing &amp; Delivery</span>
               </div>
+              <a class="maa-social-link" href="https://www.facebook.com/maa.althahab.eg" target="_blank" rel="noopener">
+                View Maa Althahab Egypt · 1M followers
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M14 5h5v5M19 5l-9 9M19 14v5H5V5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
             </div>
 
             <div>
@@ -1778,7 +1910,7 @@
           <div class="gaming-panel">
             <div>
               <div class="project-logo">
-                <img src="assets/images/gaming-logo.webp" alt="Gaming content page logo" loading="lazy">
+                <img src="assets/images/gaming-logo-hq.png" alt="Gaming content page logo" loading="lazy">
               </div>
               <h3>Gaming Content Growth</h3>
               <p>Scaled a gaming content page through high-volume short-form concepts, consistent publishing, strong packaging, and audience feedback loops.</p>
@@ -1815,7 +1947,7 @@
         <article class="case-study twentyfive" data-reveal>
           <div class="twentyfive-copy">
             <div class="twentyfive-logo">
-              <img src="assets/images/20five-logo.webp" alt="20five logo" loading="lazy">
+              <img src="assets/images/20five-logo-hq.png" alt="20five logo" loading="lazy">
             </div>
             <span class="role-chip">Video Content Creator · May — Jul 2026</span>
             <h3>20five</h3>
@@ -1830,12 +1962,11 @@
           </div>
 
           <div class="twentyfive-gallery" aria-label="Behind the scenes at 20five">
-            <figure><img src="assets/images/20five-shot-1.webp" alt="Youssef El Rawy during a training content production" loading="lazy"></figure>
-            <figure><img src="assets/images/20five-shot-2.webp" alt="Directing a short-form video shoot" loading="lazy"></figure>
-            <figure><img src="assets/images/20five-shot-3.webp" alt="Camera setup for a 20five shoot" loading="lazy"></figure>
-            <figure><img src="assets/images/20five-shot-4.webp" alt="On-set content production at 20five" loading="lazy"></figure>
-            <figure><img src="assets/images/20five-shot-5.webp" alt="Behind the scenes of a branded video" loading="lazy"></figure>
-            <figure><img src="assets/images/20five-shot-6.webp" alt="Production moment from 20five" loading="lazy"></figure>
+            <figure><img src="assets/images/20five-shot-hq-1.webp" alt="Youssef El Rawy after a 20five production" loading="lazy"></figure>
+            <figure><img src="assets/images/20five-shot-hq-2.webp" alt="Youssef El Rawy operating a camera on a 20five set" loading="lazy"></figure>
+            <figure><img src="assets/images/20five-shot-hq-3.webp" alt="Directing an on-camera contributor during a 20five shoot" loading="lazy"></figure>
+            <figure><img src="assets/images/20five-shot-hq-4.webp" alt="Behind the scenes of a 20five office production" loading="lazy"></figure>
+            <figure><img src="assets/images/20five-shot-hq-5.webp" alt="Camera and lighting setup during a 20five production" loading="lazy"></figure>
           </div>
         </article>
       </div>
@@ -1851,7 +1982,7 @@
 
         <div class="timeline" data-reveal>
           <article class="timeline-item">
-            <div class="timeline-logo"><img src="assets/images/sauce-of-drip-logo.webp" alt="Sauce of Drip logo" loading="lazy"></div>
+            <div class="timeline-logo"><img src="assets/images/sauce-of-drip-logo-hq.png" alt="Sauce of Drip logo" loading="lazy"></div>
             <div class="timeline-copy">
               <h3>Sauce of Drip</h3>
               <span class="timeline-role">Brand Identity &amp; Operations</span>
@@ -1860,7 +1991,7 @@
           </article>
 
           <article class="timeline-item">
-            <div class="timeline-logo"><img src="assets/images/el-kenz-logo.webp" alt="El Kenz logo" loading="lazy"></div>
+            <div class="timeline-logo"><img src="assets/images/el-kenz-logo-hq.png" alt="El Kenz logo" loading="lazy"></div>
             <div class="timeline-copy">
               <h3>El Kenz</h3>
               <span class="timeline-role">Brand Direction</span>
@@ -1869,7 +2000,7 @@
           </article>
 
           <article class="timeline-item">
-            <div class="timeline-logo"><img src="assets/images/enactus-logo.webp" alt="Enactus Cairo University logo" loading="lazy"></div>
+            <div class="timeline-logo"><img src="assets/images/enactus-logo-hq.png" alt="Enactus Cairo University logo" loading="lazy"></div>
             <div class="timeline-copy">
               <h3>Enactus Cairo University</h3>
               <span class="timeline-role">Project Branding &amp; Content</span>
@@ -1878,7 +2009,7 @@
           </article>
 
           <article class="timeline-item">
-            <div class="timeline-logo"><img src="assets/images/flowrista-logo.webp" alt="Flowrista logo" loading="lazy"></div>
+            <div class="timeline-logo"><img src="assets/images/flowrista-logo-hq.png" alt="Flowrista logo" loading="lazy"></div>
             <div class="timeline-copy">
               <h3>Flowrista</h3>
               <span class="timeline-role">Seasonal Content Direction</span>
@@ -1887,7 +2018,7 @@
           </article>
 
           <article class="timeline-item">
-            <div class="timeline-logo"><img src="assets/images/fces-logo.webp" alt="FCES Student Council logo" loading="lazy"></div>
+            <div class="timeline-logo"><img src="assets/images/fces-logo-hq.png" alt="FCES Student Council logo" loading="lazy"></div>
             <div class="timeline-copy">
               <h3>FCES Student Council</h3>
               <span class="timeline-role">Social Content</span>
@@ -1896,7 +2027,7 @@
           </article>
 
           <article class="timeline-item">
-            <div class="timeline-logo"><img src="assets/images/minders-logo.webp" alt="Minders logo" loading="lazy"></div>
+            <div class="timeline-logo"><img src="assets/images/minders-logo-hq.png" alt="Minders logo" loading="lazy"></div>
             <div class="timeline-copy">
               <h3>Minders</h3>
               <span class="timeline-role">Content Workflow</span>
@@ -1905,7 +2036,7 @@
           </article>
 
           <article class="timeline-item">
-            <div class="timeline-logo"><img src="assets/images/career-summit-logo.webp" alt="Egypt Career Summit logo" loading="lazy"></div>
+            <div class="timeline-logo"><img src="assets/images/career-summit-logo-hq.png" alt="Egypt Career Summit logo" loading="lazy"></div>
             <div class="timeline-copy">
               <h3>Egypt Career Summit</h3>
               <span class="timeline-role">Event Coverage</span>

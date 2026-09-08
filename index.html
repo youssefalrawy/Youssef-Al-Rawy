@@ -12,6 +12,7 @@
   <meta property="og:image" content="https://youssefalrawy.github.io/Youssef-Al-Rawy/assets/images/maa-althahab-musk-damas.webp">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://youssefalrawy.github.io/Youssef-Al-Rawy/">
+  <link rel="icon" href="assets/images/profile-nav.webp" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
@@ -566,7 +567,8 @@
 
     .redecor-gallery {
       position: relative;
-      min-height: 720px;
+      height: 780px;
+      min-height: 0;
       display: grid;
       grid-template-columns: 1.04fr 0.96fr;
       grid-template-rows: repeat(3, 1fr);
@@ -856,6 +858,8 @@
     }
 
     .reel-card {
+      display: flex;
+      flex-direction: column;
       min-width: 0;
       padding: 9px 9px 17px;
       border: 1px solid var(--line);
@@ -871,6 +875,7 @@
     }
 
     .reel-cover {
+      display: block;
       position: relative;
       overflow: hidden;
       aspect-ratio: 9 / 16;
@@ -1114,7 +1119,8 @@
     }
 
     .twentyfive-gallery {
-      min-height: 650px;
+      height: 680px;
+      min-height: 0;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
@@ -1248,7 +1254,7 @@
       height: 38px;
       display: grid;
       place-items: center;
-      margin-bottom: 22px;
+      margin-bottom: 13px;
       color: var(--accent-ink);
       background: var(--accent);
       border-radius: 12px;
@@ -1365,7 +1371,8 @@
 
       .redecor-gallery,
       .twentyfive-gallery {
-        min-height: 620px;
+        height: 700px;
+        min-height: 0;
       }
 
       .video-card {
@@ -1521,7 +1528,8 @@
       }
 
       .redecor-gallery {
-        min-height: 760px;
+        height: 760px;
+        min-height: 0;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1.15fr 0.85fr 0.85fr;
       }
@@ -1574,7 +1582,7 @@
 
       .reel-card {
         display: grid;
-        grid-template-columns: 0.58fr 0.42fr;
+        grid-template-columns: 104px minmax(0, 1fr);
         gap: 16px;
       }
 
@@ -1588,6 +1596,7 @@
       }
 
       .twentyfive-gallery {
+        height: auto;
         min-height: 0;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
@@ -1716,7 +1725,7 @@
           <p class="section-intro">Strategy, creative, production, distribution, and performance—presented as complete case studies, not disconnected deliverables.</p>
         </header>
 
-        <article class="case-study redecor-case" data-reveal>
+        <article class="case-study redecor-case" id="redecor" data-reveal>
           <div class="case-copy">
             <div>
               <span class="case-kicker">Full-time · Aug 2026 — Present</span>
@@ -1759,7 +1768,7 @@
           </div>
         </article>
 
-        <article class="case-study maa-case" data-reveal>
+        <article class="case-study maa-case" id="maa-althahab" data-reveal>
           <div class="maa-top">
             <div class="maa-title">
               <span class="case-kicker">Official company commercial assignment</span>
@@ -1906,7 +1915,7 @@
           </div>
         </section>
 
-        <article class="case-study split-case" data-reveal>
+        <article class="case-study split-case" id="gaming" data-reveal>
           <div class="gaming-panel">
             <div>
               <div class="project-logo">
@@ -1944,7 +1953,7 @@
           </div>
         </article>
 
-        <article class="case-study twentyfive" data-reveal>
+        <article class="case-study twentyfive" id="twentyfive" data-reveal>
           <div class="twentyfive-copy">
             <div class="twentyfive-logo">
               <img src="assets/images/20five-logo-hq.png" alt="20five logo" loading="lazy">

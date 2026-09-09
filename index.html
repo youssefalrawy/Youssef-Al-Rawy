@@ -9,8 +9,17 @@
   <meta property="og:description" content="Selected social media, short-form content, and commercial work generating 7M+ combined views and 475K+ likes.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://youssefalrawy.github.io/Youssef-Al-Rawy/">
-  <meta property="og:image" content="https://youssefalrawy.github.io/Youssef-Al-Rawy/assets/images/maa-althahab-musk-damas.webp">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="https://youssefalrawy.github.io/Youssef-Al-Rawy/assets/images/youssef-el-rawy-share-v2.png">
+  <meta property="og:image:secure_url" content="https://youssefalrawy.github.io/Youssef-Al-Rawy/assets/images/youssef-el-rawy-share-v2.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="756">
+  <meta property="og:image:height" content="756">
+  <meta property="og:image:alt" content="Youssef El Rawy — Content Creator and Social Media Marketer">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Youssef El Rawy — Content Creator & Social Media Marketer">
+  <meta name="twitter:description" content="Selected social media, short-form content, and commercial work generating 7M+ combined views and 475K+ likes.">
+  <meta name="twitter:image" content="https://youssefalrawy.github.io/Youssef-Al-Rawy/assets/images/youssef-el-rawy-share-v2.png">
+  <meta name="twitter:image:alt" content="Youssef El Rawy — Content Creator and Social Media Marketer">
   <link rel="canonical" href="https://youssefalrawy.github.io/Youssef-Al-Rawy/">
   <link rel="icon" href="assets/images/profile-nav.webp" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -418,7 +427,7 @@
     }
 
     .hero-impact.is-counted::after {
-      animation: impact-shine 760ms cubic-bezier(0.2, 0.75, 0.2, 1) 1;
+      animation: impact-shine 2500ms cubic-bezier(0.25, 0.45, 0.45, 1) 1;
     }
 
     .hero-impact-label {
@@ -434,6 +443,7 @@
 
     .hero-impact-grid {
       display: grid;
+      container-type: inline-size;
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -452,13 +462,13 @@
       display: block;
       margin-bottom: 5px;
       color: var(--gold-pale);
-      font-size: clamp(1.85rem, 3.5vw, 2.55rem);
+      font-size: clamp(1.75rem, 11cqi, 3rem);
       font-weight: 800;
       letter-spacing: -0.045em;
       line-height: 1;
     }
 
-    .hero-impact-metric span:last-child {
+    .hero-impact-metric > span:last-child {
       display: block;
       color: var(--muted);
       font-size: 0.67rem;
@@ -479,7 +489,7 @@
         opacity: 0;
         transform: skewX(-18deg) translateX(-260%);
       }
-      24% {
+      20%, 75% {
         opacity: 1;
       }
       100% {
@@ -1159,25 +1169,27 @@
 
     .gaming-stats {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
+      container-type: inline-size;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr));
+      gap: 24px 16px;
     }
 
     .gaming-stat {
+      min-width: 0;
       padding-top: 16px;
       border-top: 1px solid rgba(216, 185, 106, 0.34);
     }
 
     .gaming-stat strong {
       display: block;
-      margin-bottom: 4px;
-      font-size: clamp(1.8rem, 3vw, 3rem);
+      margin-bottom: 10px;
+      font-size: clamp(1.8rem, 8cqi, 2.75rem);
       color: var(--gold-pale);
       letter-spacing: -0.045em;
       line-height: 1;
     }
 
-    .gaming-stat span {
+    .gaming-stat > span {
       color: #bfc4bc;
       font-size: 0.65rem;
       font-weight: 850;
@@ -1696,10 +1708,6 @@
         padding-left: 13px;
       }
 
-      .hero-impact-metric strong {
-        font-size: clamp(1.72rem, 9vw, 2.2rem);
-      }
-
       .section {
         padding-block: 82px;
       }
@@ -1764,6 +1772,10 @@
 
       .gaming-stats {
         grid-template-columns: 1fr;
+      }
+
+      .gaming-stat strong {
+        font-size: clamp(2.6rem, 14cqi, 3.4rem);
       }
 
       .twentyfive-gallery {
@@ -2040,7 +2052,7 @@
 
               <article class="video-card">
                 <div class="video-frame">
-                  <video controls playsinline preload="metadata" poster="assets/images/maa-story-cover-pro-v2.webp" aria-label="Maa Althahab Musk Damas campaign Story">
+                  <video controls playsinline preload="metadata" poster="assets/images/maa-story-personal-cover-v3.webp" aria-label="Maa Althahab Musk Damas campaign Story featuring Youssef El Rawy">
                     <source src="assets/media/maa-althahab-story-web.mp4" type="video/mp4">
                     Your browser does not support embedded video.
                   </video>
@@ -2416,10 +2428,12 @@
         var target = Number(counter.dataset.countTo);
         var decimals = Number(counter.dataset.countDecimals || 0);
         var suffix = counter.dataset.countSuffix || "";
-        var duration = Number(counter.dataset.countDuration || 880);
+        var duration = Number(counter.dataset.countDuration || 3000);
+        var runningDecimals = /[KM]/.test(suffix) && target < 100 ? Math.max(decimals, target < 2 ? 2 : 1) : decimals;
+        var runningScale = Math.pow(10, runningDecimals);
         var startedAt = null;
 
-        counter.textContent = formatCounter(0, decimals, suffix);
+        counter.textContent = formatCounter(0, runningDecimals, suffix);
 
         function step(timestamp) {
           if (startedAt === null) {
@@ -2427,10 +2441,11 @@
           }
 
           var progress = Math.min((timestamp - startedAt) / duration, 1);
-          var easedProgress = 1 - Math.pow(1 - progress, 3);
-          counter.textContent = formatCounter(target * easedProgress, decimals, suffix);
+          var easedProgress = 1 - Math.pow(1 - progress, 2);
+          var runningValue = Math.floor(target * easedProgress * runningScale) / runningScale;
 
           if (progress < 1) {
+            counter.textContent = formatCounter(runningValue, runningDecimals, suffix);
             window.requestAnimationFrame(step);
           } else {
             counter.textContent = formatCounter(target, decimals, suffix);
